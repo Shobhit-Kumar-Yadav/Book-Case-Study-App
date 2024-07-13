@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Register here</h2>
+    <hr/>
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" required [(ngModel)]="user.username" name="username">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" required [(ngModel)]="user.email" name="email">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+      </div>
+      <br/>
+      <div class="form-group">
+        <label for="profileImage">Profile Image</label>
+        <input type="file" class="form-control-file" id="profileImage" (change)="onFileSelected($event)">
+      </div>
+      <br/>
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </div>
+  
